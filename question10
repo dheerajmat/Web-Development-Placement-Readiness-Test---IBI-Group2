@@ -1,0 +1,21 @@
+ans 
+1
+4
+2
+3
+
+
+
+ex
+
+console.log(1); is executed first, and it logs the number 1.
+
+setTimeout(printNumber, 0, 2); is added to the event queue but doesn't execute immediately since the delay is 0. It waits until all synchronous code is finished.
+
+console.log(4); is executed next, and it logs the number 4.
+
+Now, all synchronous code has finished. JavaScript starts processing the event queue.
+
+The printNumber(2) function from the first setTimeout is executed, logging the number 2 to the console.
+
+Finally, after 100 milliseconds, the printNumber(3) function from the second setTimeout is executed, logging the number 3 to the console.
